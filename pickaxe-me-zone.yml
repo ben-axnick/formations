@@ -1,0 +1,14 @@
+Resources:
+  PickaxeMeZone:
+    Type: "AWS::Route53::HostedZone"
+    Properties: 
+      Name: "pickaxe.me"
+  ToyRobotApiRecord:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: !Ref PickaxeMeZone
+      Name: "toy-robot-api.pickaxe.me"
+      Type: "CNAME"
+      TTL: 60
+      ResourceRecords:
+        - "toy-robot-api-web-2MAENX3-91737496.ap-southeast-2.elb.amazonaws.com"
