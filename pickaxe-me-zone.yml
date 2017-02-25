@@ -12,3 +12,12 @@ Resources:
       TTL: 60
       ResourceRecords:
         - "toy-robot-api-web-2MAENX3-91737496.ap-southeast-2.elb.amazonaws.com"
+  FactorioRecord:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: !Ref PickaxeMeZone
+      Name: "factorio.pickaxe.me"
+      Type: "A"
+      TTL: 60
+      ResourceRecords:
+        - "45.76.119.123"
