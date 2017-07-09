@@ -20,4 +20,13 @@ Resources:
       Type: "A"
       TTL: 60
       ResourceRecords:
-        - "45.76.119.123"
+        - "45.63.26.168"
+  MinecraftRecord:
+    Type: "AWS::Route53::RecordSet"
+    Properties:
+      HostedZoneId: !Ref PickaxeMeZone
+      Name: "minecraft.pickaxe.me"
+      Type: "A"
+      TTL: 60
+      ResourceRecords:
+        - "45.63.26.168"
